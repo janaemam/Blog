@@ -1,0 +1,90 @@
+body{
+ background-color: #f2f2f2;
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+}
+
+
+.header{
+    display: grid;
+    align-items: center;
+    padding-top:10px ;
+    grid-template-rows:auto;
+    grid-template-areas: 
+    "logo button"
+    "menu menu";
+}
+.header a{
+    text-decoration: none;
+    color: inherit;
+}
+.header a:visited, .header a:link{
+color: inherit;
+}
+.headerLogo{
+    font-weight: 800;
+    font-size: 25px;
+    grid-area: logo;
+}
+.headerLogo:hover{
+    text-decoration: underline;
+    color: red !important;
+}
+.headerNav{
+    justify-content: center;
+    display: flex;
+    grid-area: menu;
+}
+.headerNav ul{
+    list-style-type:none ;
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.headerButton{
+    display: flex;
+    justify-content: flex-end;
+    grid-area: button;
+}
+.headerButton button{
+    display: flex;
+    background: none;
+    border: none;
+    align-items: center;
+    font-weight: 500;
+    
+}
+
+.headerButton,.headerLogo,.headerNav{
+    width: 100%;
+}
+/* Layout Style */
+.container{
+    max-width: 982px;
+    margin: 0 auto;
+    padding:0 10px;
+
+
+}
+.main{
+    padding: 20px 0;
+    margin: 0 auto;
+    align-items: center;
+}
+/*The main index page*/
+.wandaGif{
+    border-radius: 15px;
+    filter: drop-shadow(0px 44px 34px rgba(0, 0, 0, 0.25));
+}
+.posts, .wanda{
+    text-align: center;
+}
+.postHeader{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/*Footer*/
