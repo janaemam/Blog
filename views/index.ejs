@@ -10,9 +10,22 @@
 <section class="posts">
     <h2 class="postHeader">Latest Posts</h2>
     <ul class="postList">
-        <li>
 
+        
+        <% data.forEach( element => { %>
+            <% console.log(element.id) %>
+                <li>
+            <a class="postLink" href="/post/<%= element.id %>">
+                <span class="postTitle"><%= element.title %></span>
+                <span class="postDate"><%= element.createdAt.toDateString() %></span>
+            </a>
         </li>
+        <% }) %>
     </ul>
 
+    <% if(nextPage !== null){%>
+        <a href="/?page=<% nextPage %>" class="pagination"> &lt;Next Page</a>
+    <% } %>
+     
+    
 </section>
