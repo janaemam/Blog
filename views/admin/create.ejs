@@ -1,7 +1,12 @@
-<form action="/add" method="POST">
-<label>Title</label>
-<input required placeholder="Last Christmas" name="title"></input>
-<label>Body</label>
-<textarea required placeholder="we went to the zoo" name="body"></textarea>
-<button type="submit" value="add">Submit</button>
-</form>
+<div class="createMainContainer">
+    <form action="/add" method="POST">
+
+            <label >Title</label>
+            <textarea required class="titleArea" placeholder="Last Christmas" name="title" style="resize: none;"></textarea>
+
+            <label>Body</label>
+            <textarea required class="bodyArea" placeholder="we went to the zoo" name="body"></textarea> 
+
+        <button type="submit" value="add">Submit</button>
+    </form>
+</div>

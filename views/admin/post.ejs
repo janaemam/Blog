@@ -1,9 +1,13 @@
-<div>
-<h1><%= data.title %></h1>
-<button onclick="window.location.href='/edit-post/<%=data.id%>'">Edit</button>
-<form action="/delete/<%=data.id%>?_method=DELETE" method="post">
-<button type="submit">Delete</button>
-</form>
+<div class="postMainContainer">
+    <div class="postMainHeader">
+        <h1><%= data.title %></h1>
+        <div class="buttonsDiv">
+            <button onclick="window.location.href='/edit-post/<%=data.id%>'">Edit</button>
+            <form action="/delete/<%=data.id%>?_method=DELETE" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+    <p class="postCreationDate"><%=data.createdAt.toDateString()  %></p>
+    <p class="postContent"><%= data.body %></p  >
 </div>
-<p><%=data.createdAt.toDateString()  %></p>
-<p><%= data.body %></p  >

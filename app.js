@@ -8,7 +8,6 @@ const connectDB =require('./server/config/db');
 const session = require('express-session');
 const {isActiveRoute} = require('./server/helpers/routerHelper');
 const methodOverride = require('method-override');
-
 const app = express();
 const port= process.env.PORT || 3000;
 

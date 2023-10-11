@@ -1,22 +1,24 @@
-<a href="/create">Create new Post</a>
+<div class="dashMainContainer">
 
-
-<section class="posts">
-    <h2 class="postHeader">All Posts</h2>
-<ul class="postList">
-<% data.forEach(element => {%>
-<li >
-    
-    <div class="postLink">
-        <a class="postTitle" href="/admin-post/<%= element.id %>"><%= element.title %></a>
-        <span class="postDate"><%= element.createdAt.toDateString() %></span>
-        <form action="/delete/<%= element.id %>?_method=DELETE" method="POST">
-            <button type="submit" class="btn-delete btn">Delete</button>
-          </form>
-
+    <div class="postHeader">
+        <h2>Posts</h2>
+        <button onclick="location.href='/create'">New Post</button>
     </div>
+    <div class="postList">
+        <ul>
+            <% data.forEach(element => {%>
+                <li class="linkRow">
 
-</li>
-<%}); %>
-</ul>
-</section>
+                        <a class="postTitle" href="/admin-post/<%= element.id %>"><%= element.title %></a>
+                        <span class="postDate"><%= element.createdAt.toDateString() %></span>
+                        <form action="/delete/<%= element.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="deletePost">Delete</button>
+                        </form>
+
+
+                </li>
+                <hr>
+            <%}); %>
+        </ul>
+    </div>
+</div>

@@ -1,11 +1,11 @@
-<div>
+<div class="createMainContainer">
     <form action="/edit-post/<%= data.id%>?_method=PUT" method="post">
         <% console.log(data.id); %>
 
-    <h3>Title</h3>
-    <textarea name="title"><%= data.title %></textarea>
-    <h3>Body</h3>
-    <textarea name="body"><%= data.body %></textarea>
-    <button type="submit" value="update">Save</button>
-</form>
+        <label>Title</label>
+        <textarea required class="titleArea" name="title"><%= data.title %></textarea>
+        <label>Body</label>
+        <textarea required class="bodyArea" name="body"><%= data.body %></textarea>
+        <button type="submit" value="update">Save</button>
+    </form>
 </div>

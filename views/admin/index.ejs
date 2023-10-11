@@ -1,18 +1,23 @@
-<h3>Sign In</h3>
+<div class="signIn">
+  <h3>Sign In</h3>
 
-<form action="/login" method="POST">
 
-  <label for="username"><b>Username</b></label>
-  <input type="text" placeholder="Enter Username" name="username">
-
+  <form action="/login" method="POST">
+  <div class="inputData">
+  <label for="username" ><b>Username</b></label>
+  <input type="text" placeholder="Ali" name="username" required>
+</div>
+<div class="inputData">
   <label for="password"><b>Password</b></label>
-  <input type="password" placeholder="Enter Password" name="password">
+  <input type="password" placeholder="#fGT83" name="password" required>
+</div>
 
-  <input type="submit" value="Login" class="btn">
+  <button type="submit">Login</button>
 
 </form>
+</div>
 
- <h3>Register</h3>
+ <!-- <h3>Register</h3>
 <form action="/register" method="POST">
 
   <label for="username"><b>Username</b></label>
@@ -23,4 +28,4 @@
 
   <input type="submit" value="Register" class="btn">
 
-</form> 
+</form>  -->

@@ -5,8 +5,11 @@ body{
  display: flex;
  flex-direction: column;
  font-family: "Poppins";
-}
 
+}
+.container{
+    height: 100%;
+}
 
 .header{
     display: grid;

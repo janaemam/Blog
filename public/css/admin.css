@@ -1,0 +1,375 @@
+*{
+    font-family: "Poppins";
+    overflow: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+  }
+main{
+    height: 69vh;
+}
+body{
+
+ background-color: #f2f2f2;
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+}
+
+.container{
+    height: 100vh;
+}
+
+
+/*Admin Header and Navigation Bar*/
+.adminHeader{
+    display: grid;
+    align-items: center;
+    padding-top:10px ;
+    width: 100%;
+    grid-template-rows:auto;
+    grid-template-areas: 
+    "logo button"
+    "menu menu";
+}
+.adminHeader a{
+    text-decoration: none;
+    color: inherit;
+}
+.adminHeader a:visited, .adminHeader a:link{
+color: inherit;
+}
+.adminHome{
+    font-weight: 800;
+    font-size: 25px;
+    grid-area: logo;
+    padding-left:20px ;
+}
+.adminHome:hover{
+    color: #553555 !important;
+}
+.adminHeaderNav{
+    justify-content: center;
+    display: flex;
+    grid-area: menu;
+}
+.adminHeaderNav ul{
+    list-style-type:none ;
+    display: flex;
+    gap: 2rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.logoutButton{
+    display: flex;
+    justify-content: flex-end;
+    grid-area: button;
+}
+.logoutButton button{
+    display: flex;
+    background: none;
+    border: none;
+    align-items: center;
+    font-weight: 800;
+    font-size: 25px;
+    padding-right: 20px;
+    
+}
+.logoutButton button:hover{
+    cursor: pointer;
+    color:rgb(159, 15, 15);
+}
+
+
+/*Index page. ie. Login and Register */
+.signIn{
+    margin-top:30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    height: 99%;
+    width: 500px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+.signIn form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signIn h3{
+    font-size: 30px;
+}
+.inputData{
+    margin-top :10px ;
+    margin-bottom: 15px;
+}
+
+.inputData label{
+    font-size: 1.2rem;
+}
+.inputData input{
+    border-radius: 15px;
+    border: 1px solid grey;
+    width: 12rem;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.inputData input:focus{
+    padding-left: 10px;
+}
+.signIn button{
+    margin-top: 20px;
+    margin-bottom:20px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: 1px solid grey;
+    width: 6rem;
+    align-self: center;
+    box-shadow: 2px 2px;
+}
+.signIn button:hover{
+    cursor: pointer;
+    background-color: #553555;
+    box-shadow: 2px 2px #553555;
+    border: #553555 1px solid;
+    color: #f2f2f2;
+}
+
+/*Dashboard*/
+
+.dashMainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+}
+.postList {
+    list-style-type: none;
+    padding: 0;
+    
+}
+.postList a{
+    text-decoration: none;
+    color: inherit;
+}
+.postList a:visited, .postList a:link{
+color: inherit;
+}
+.postList ul{
+    padding: 0;
+}
+
+
+.postHeader{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    flex-wrap: wrap;
+}
+
+.postHeader button{
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: 1px solid grey;
+    height: 25px;
+    width: 6rem;
+    
+}
+.postHeader button:hover{
+    cursor: pointer;
+    background-color: #553555;
+   
+    border: #553555 1px solid;
+    color: #f2f2f2;
+}
+
+.linkRow{ 
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    width: 850px;
+    justify-content: space-between;
+    
+}
+
+.postTitle{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.linkRow button{
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: 1px solid grey;
+    height: 25px;
+    width: 4rem;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.linkRow button:hover{
+    color: #f2f2f2;
+    background-color: #553555;
+    border: #553555 1px solid;
+
+}
+.postTitle{
+    width: 360px;
+    overflow: hidden;
+}
+.postDate{
+    color: #9E9E9E;
+    display: inline-block;
+    width: 160px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+    font-size: 15px;
+}
+hr{
+    opacity: 0.5;
+    color: #9E9E9E;
+}
+
+/*Create new post page*/
+.createMainContainer{
+    margin-top: 40px;
+}
+.createMainContainer form{
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.createMainContainer label{
+    font-size: 1.5rem;
+    width:160px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.createMainContainer button{
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: 1px solid grey;
+    height: 25px;
+    width: 7rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    cursor: pointer;
+    padding: 0;
+}
+.createMainContainer button:hover{
+    color: #f2f2f2;
+    background-color: #553555;
+    border: #553555 1px solid;
+}
+.titleArea{
+    height: 30px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    resize: none;
+    border: #9E9E9E 1px solid;
+}
+.bodyArea{
+    height: 200px;
+    padding-left: 10px;
+    border: #9E9E9E 1px solid;
+    resize: none;
+    overflow: scroll;
+
+}
+
+.titleArea:focus, .bodyArea:focus{ 
+    padding-left: 10px;
+    outline: #9E9E9E;
+}
+
+
+
+
+/*view post page*/
+.postMainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 850px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: auto;
+}
+.postMainHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 850px;
+    justify-content: space-between;
+
+}
+.buttonsDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.postMainHeader button{
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: 1px solid grey;
+    height: 25px;
+}
+.postMainHeader button:hover{
+    color: #f2f2f2;
+    background-color: #553555;
+    border: #553555 1px solid;
+}
+
+.postCreationDate{
+    color: #9E9E9E;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 15px;
+    width: 850px;
+    margin: 0;
+}
+.postContent{
+    width: 850px;
+    padding-top: 10px;
+    height: 200px;
+}
+
+
+
+
+
+/*Footer*/
+footer{
+    margin-top: 5rem;
+    text-align: center;
+}
+
