@@ -1,0 +1,22 @@
+<a href="/create">Create new Post</a>
+
+
+<section class="posts">
+    <h2 class="postHeader">All Posts</h2>
+<ul class="postList">
+<% data.forEach(element => {%>
+<li >
+    
+    <div class="postLink">
+        <a class="postTitle" href="/admin-post/<%= element.id %>"><%= element.title %></a>
+        <span class="postDate"><%= element.createdAt.toDateString() %></span>
+        <form action="/delete/<%= element.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="btn-delete btn">Delete</button>
+          </form>
+
+    </div>
+
+</li>
+<%}); %>
+</ul>
+</section>

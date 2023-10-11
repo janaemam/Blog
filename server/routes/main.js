@@ -15,7 +15,7 @@ router.get('/', async(req,res)=>{
         let page = req.query.page || 1;
 
 
-
+        
         const data = await post.find().sort({createdAt: -1}).skip(perPage * page - perPage).limit(perPage);
 
         const count = await post.count();
@@ -25,7 +25,7 @@ router.get('/', async(req,res)=>{
 
 
 
-        res.render('index', {data,
+        res.render('index', { data,
             locals,
             current: page,
             nextPage:hasNextPage?nextPage:null,
@@ -46,6 +46,30 @@ router.get('/post/:id', async(req,res)=>{
     try{
         const data = await post.findById({_id: req.params.id});
         res.render('post',{data, currentRoute:`/post/${req.params.id}`});
+    }
+    catch(error){
+        console.log(error)
+    }
+
+})
+
+router.post('/search', async(req,res)=>{
+    try{
+
+        let searchTerm= req.body.searchTerm;
+        console.log(searchTerm);
+        
+        const data = await post.find({
+            $or: [
+                {title:{$regex: searchTerm, $options: 'i'}},
+                {body:{$regex: searchTerm, $options: 'i'}}
+            ]
+            });
+            
+        console.log(typeof(data));
+        // const data = await post.findById({_id: req.params.id});
+        res.render('search',{data});
+
     }
     catch(error){
         console.log(error)

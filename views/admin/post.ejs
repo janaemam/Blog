@@ -1,0 +1,9 @@
+<div>
+<h1><%= data.title %></h1>
+<button onclick="window.location.href='/edit-post/<%=data.id%>'">Edit</button>
+<form action="/delete/<%=data.id%>?_method=DELETE" method="post">
+<button type="submit">Delete</button>
+</form>
+</div>
+<p><%=data.createdAt.toDateString()  %></p>
+<p><%= data.body %></p  >

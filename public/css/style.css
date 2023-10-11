@@ -140,3 +140,41 @@ color: inherit;
 .pagination:hover{
     color: rgb(184, 35, 48);
 }
+
+
+/*Search Bar*/
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    /*visibility: hidden;*/
+    margin-top: 10px;
+    background-color: #f2f2f2;
+  
+}
+.searchBar input{
+    width: 400px;
+    border-radius: 10px;
+    border: black 1px solid;
+    height: 25px;
+}
+#openSearchButton:hover{
+    cursor: pointer;
+}
+.searchBarButton{
+
+    border-radius: 10px;
+    border: black 1px solid;
+}
+.searchBarButton:hover{
+    cursor: pointer;
+    color: #f2f2f2;
+    background-color: black;
+}
+
+/*Admin Portal*/
+#logoutButton{
+    font-weight: 800;
+    font-size: 25px;
+}

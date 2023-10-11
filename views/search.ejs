@@ -1,0 +1,17 @@
+<div>
+    <h1>Search Results</h1>
+</div>
+<section>
+    <% data.forEach(element=>{ %>
+        <ul>
+            <li>
+                <a href="/post/<%= element.id %>">
+                    <span><%= element.title %></span>
+                    <span><%= element.createdAt.toDateString() %></span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <% }) %>
+</section>

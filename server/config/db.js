@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
-const dbURI= 'mongodb://127.0.0.1:27017/wandaBlog';
-const {MongoClient} =require("mongodb")
+const dbURI= process.env.MONGO_URI ;
+const {MongoClient} =require("mongodb");
 
 const connectDB= async ()=>{
 
