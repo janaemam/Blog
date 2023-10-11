@@ -171,7 +171,7 @@ router.put('/edit-post/:id', authMiddleware, async(req,res)=>{
 router.get('/logout',authMiddleware, async(req,res)=>{
     try{    
         res.clearCookie('tokenCookie');
-        redirect('/index', {layout: 'layout/main'});
+        res.redirect('/');
 
     }catch(error){
         console.log(error);
