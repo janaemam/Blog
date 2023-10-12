@@ -1,6 +1,6 @@
 *{
     font-family: "Poppins";
-    overflow: hidden;
+    
 }
 ::-webkit-scrollbar{
       display: none;
@@ -156,6 +156,8 @@ color: inherit;
 .postList {
     list-style-type: none;
     padding: 0;
+    overflow: scroll;
+    height: 450px;
     
 }
 .postList a{

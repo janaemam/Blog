@@ -11,7 +11,7 @@ router.get('/', async(req,res)=>{
         }
 
         //find all mongoose entries and return array
-        let perPage = 8;
+        let perPage = 5;
         let page = req.query.page || 1;
 
 
@@ -21,7 +21,8 @@ router.get('/', async(req,res)=>{
         const count = await post.count();
         const nextPage = parseInt(page) + 1;
         const hasNextPage = nextPage <= Math.ceil(count/perPage);
-
+        const prevPage = parseInt(page)-1;
+        const hasPrevPage= prevPage<=Math.floor(count/perPage);
 
 
 
@@ -29,6 +30,7 @@ router.get('/', async(req,res)=>{
             locals,
             current: page,
             nextPage:hasNextPage?nextPage:null,
+            prevPage:hasPrevPage?prevPage:null,
             currentRoute:''
         });
 

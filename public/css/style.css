@@ -165,17 +165,25 @@ color: inherit;
 .postTitle:hover{
     color: #553555;
 }
-.pagination{
+.paginationRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 16px;
     color: #9E9E9E;
-    display: inline-block;
-    width: 260px;
-    text-align: left;
-    text-decoration: none;
-    margin-left: -300px;
+    width: 850px;
+   
 }
-.pagination:hover{
-    color: rgb(184, 35, 48);
+.paginationRow a{
+    text-decoration: none;
+}
+.paginationRow a:visited{
+    color: inherit;
+}
+
+
+.paginationRow a:hover{
+    color: black;
 }
 hr{
     opacity: 0.5;
