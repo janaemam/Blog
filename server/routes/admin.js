@@ -109,7 +109,7 @@ router.get('/create',authMiddleware, async(req,res)=>{
         console.log(error);
     }
 })
-router.post('/add',async(req,res)=>{
+router.post('/add', authMiddleware, async(req,res)=>{
     try{
         const {title, body}= req.body;
         if(post.create({title: title, body: body})){
@@ -124,7 +124,7 @@ router.post('/add',async(req,res)=>{
     }
 }
 )
-router.get('/admin-post/:id', async(req,res)=>{
+router.get('/admin-post/:id',authMiddleware, async(req,res)=>{
     try{
         const data = await post.findById({_id: req.params.id});
         res.render('admin/post',{data, currentRoute:`/post/${req.params.id}`, layout: adminLayout});

@@ -1,9 +1,11 @@
 <div class="searchBar" id="searchBar">
     <div class="searchBarContainer">
-        <form action="/search" method="post" class="searchForm" role="search">
-            <input type="search" aria-label="search" id="searchInput" name="searchTerm">
+        <form action="/search" method="post" class="searchForm" role="search" >
+            <input type="search" aria-label="search" id="searchInput" name="searchTerm" required>
+            <button type="submit" id="searchButton" class="searchButton">Search</button>
         </form>
+        <button id="closeSearch" class="closeSearchButton">Close</button>
     </div>
-    <button type="submit" id="searchButton" class="searchBarButton">Search</button>
-      <button id="closeSearch" class="searchBarButton">Close</button>
+
+
 </div>

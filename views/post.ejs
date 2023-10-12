@@ -1,2 +1,7 @@
-<h1><%= data.title %></h1>
-<p><%= data.body %></p  >
+<div class="postMainContainer">
+    <div class="postMainHeader">
+        <h1><%= data.title %></h1>   
+    </div>
+    <p class="postCreationDate"><%=data.createdAt.toDateString()  %></p>
+    <p class="postContent"><%= data.body %></p  >
+</div>

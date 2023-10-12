@@ -1,17 +1,17 @@
-<div>
-    <h1>Search Results</h1>
-</div>
-<section>
-    <% data.forEach(element=>{ %>
-        <ul>
-            <li>
-                <a href="/post/<%= element.id %>">
-                    <span><%= element.title %></span>
-                    <span><%= element.createdAt.toDateString() %></span>
-                </a>
-            </li>
-        </ul>
-
+<div class="searchMainContainer">
+    <div>
+        <h1>Results</h1>
     </div>
-    <% }) %>
-</section>
+    <section class="postList">
+        <% data.forEach(element=>{ %>
+            <ul>
+                <li class="linkRow">
+                    <a class="postTitle" href="/post/<%= element.id %>"><%= element.title %></a>
+                    <span class="postDate"><%= element.createdAt.toDateString() %></span>
+        
+                </li>
+                <hr>
+            </ul>
+        <% }) %>
+    </section>
+</div>
